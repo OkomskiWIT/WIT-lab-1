@@ -70,4 +70,132 @@ nav ul li a {
 }
 
 nav ul li a:hover,
-nav
+nav ul li a:focus {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+section {
+    background: var(--card-bg);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+#wstep {
+    background: linear-gradient(135deg, var(--primary-color), #818cf8);
+    color: white;
+    text-align: center;
+}
+
+#wstep h2 {
+    color: white;
+    border-bottom: none;
+}
+
+#wstep p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+h2 { 
+    font-size: 1.6em; 
+    color: var(--text-main); 
+    border-bottom: 2px solid var(--border-color); 
+    padding-bottom: 10px; 
+    margin-top: 0;
+}
+
+h3 { 
+    font-size: 1.1em; 
+    color: var(--text-muted); 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    font-weight: 700; 
+    margin-top: 0;
+}
+
+h4 { 
+    font-size: 1.2em; 
+    color: var(--primary-color); 
+    margin-top: 0; 
+}
+
+.translations {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.examples {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .translations {
+        grid-template-columns: 1fr 1fr;
+    }
+    .examples {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.example-item {
+    background: var(--card-bg);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 15px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-weight: bold;
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+hr { 
+    display: none; 
+}
+
+footer { 
+    text-align: center; 
+    font-size: 0.9em; 
+    color: var(--text-muted); 
+    padding: 40px 0; 
+    border-top: 1px solid var(--border-color);
+}
