@@ -5,3 +5,5 @@ Grupa: IZ04P03 Okomski, Kazimierczak
 Autor: Jakob Nielsen
 Tytuł: 10 Usability Heuristics for User Interface Design
 Link: https://www.nngroup.com/articles/ten-usability-heuristics/
+
+Github Pages: https://kazimieiwit.github.io/WIT-lab-1_web
