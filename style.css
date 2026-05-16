@@ -49,19 +49,24 @@ main {
 
 nav ul {
     list-style-type: none;
-    padding: 5px 0;
+    padding: 10px 0;
     margin: 0;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 8px 6px;
+    display: block;
+    margin: 0;
     padding: 0;
 }
 
 nav ul li a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     color: var(--text-muted);
     text-decoration: none;
@@ -72,7 +77,7 @@ nav ul li a {
     background-color: #f8fafc;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
-    line-height: normal;
+    line-height: 1;
 }
 
 nav ul li a:hover,
@@ -206,10 +211,6 @@ footer {
 
     main {
         padding: 20px;
-    }
-
-    nav ul li {
-        margin: 6px;
     }
 
     section {
