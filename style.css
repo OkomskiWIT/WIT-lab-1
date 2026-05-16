@@ -49,42 +49,45 @@ main {
 
 nav ul {
     list-style-type: none;
-    padding: 5px 0;
+    padding: 10px 0 20px 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px 12px;
 }
 
 nav ul li {
     display: block;
-    margin: 6px;
+    margin: 0;
     padding: 0;
+    height: 40px;
 }
 
-/* Sztywne wymiary 40x40px dla wszystkich przycisków */
 nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    height: 100%;
     width: 40px;
-    height: 40px;
-    padding: 0;
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95em;
-    border-radius: 50%; /* Tworzy idealne koła */
+    border-radius: 50%;
     background-color: #f8fafc;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
 }
 
-/* Wyjątek dla przycisku "Wstęp", aby tekst się w nim zmieścił */
+nav ul li:first-child {
+    width: auto;
+}
+
 nav ul li:first-child a {
     width: auto;
-    padding: 0 18px;
+    padding: 0 16px;
     border-radius: 20px;
 }
 
@@ -209,3 +212,42 @@ footer {
 }
 
 @media (min-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        padding: 40px;
+        margin-bottom: 40px;
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+    }
+    
+    section:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    }
+
+    .translations {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .examples {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .example-item {
+        padding: 20px;
+    }
+}
