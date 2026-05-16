@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 200px;
+    scroll-padding-top: 220px; 
 }
 
 body {
@@ -29,7 +29,7 @@ header {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border-color);
-    padding: 15px 20px;
+    padding: 15px 10px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
@@ -44,7 +44,7 @@ header h1 {
 main, footer {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 10px; /* Zmniejszone dla mobile, by zlikwidować paski */
 }
 
 nav ul {
@@ -54,15 +54,11 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px 10px;
-}
-
-nav ul li {
-    display: block;
+    gap: 15px; /* Bezpieczny, równy odstęp z każdej strony */
 }
 
 nav ul li a {
-    display: inline-block;
+    display: block; /* To zapobiegnie nachodzeniu na siebie elementów w pionie */
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 600;
@@ -84,9 +80,9 @@ nav ul li a:focus {
 
 section {
     background: var(--card-bg);
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 16px;
+    padding: 20px; /* Mniejsze marginesy wewnętrzne na telefonach */
+    margin-bottom: 20px;
+    border-radius: 12px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
     border: 1px solid var(--border-color);
     transition: transform 0.3s ease;
@@ -138,22 +134,22 @@ h4 {
 .translations {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 15px;
     background-color: var(--bg-color);
-    padding: 20px;
+    padding: 15px;
     border-radius: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .examples {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 20px;
 }
 
 .example-item {
     background: var(--card-bg);
-    padding: 20px;
+    padding: 15px;
     border: 1px solid var(--border-color);
     border-radius: 12px;
 }
@@ -169,7 +165,7 @@ img {
 
 .image-placeholder {
     width: 100%;
-    height: 200px;
+    height: 150px;
     background-color: #f1f5f9;
     display: flex;
     align-items: center;
@@ -180,7 +176,7 @@ img {
     border-radius: 8px;
     margin-bottom: 15px;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 10px;
     box-sizing: border-box;
 }
 
@@ -196,6 +192,7 @@ footer {
     border-top: 1px solid var(--border-color);
 }
 
+/* Wersja na tablety i desktopy - przywracamy duże marginesy i układ siatki */
 @media (min-width: 768px) {
     header h1 {
         font-size: 1.8em;
@@ -205,21 +202,6 @@ footer {
         font-size: 1.6em;
     }
 
-    section {
-        padding: 35px;
-    }
-
-    .translations {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .examples {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-}
-
-@media (min-width: 1024px) {
     main, footer {
         padding: 20px;
     }
@@ -227,5 +209,21 @@ footer {
     section {
         padding: 40px;
         margin-bottom: 40px;
+        border-radius: 16px;
+    }
+
+    .translations {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .examples {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .example-item {
+        padding: 20px;
     }
 }
