@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 180px;
+    scroll-padding-top: 200px;
 }
 
 body {
@@ -34,7 +34,7 @@ header {
 }
 
 header h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     color: var(--primary-color);
     margin: 0 0 15px 0;
     text-align: center;
@@ -44,7 +44,7 @@ header h1 {
 main, footer {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
 }
 
 nav ul {
@@ -54,10 +54,15 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+    gap: 15px 10px;
+}
+
+nav ul li {
+    display: block;
 }
 
 nav ul li a {
+    display: inline-block;
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 600;
@@ -79,8 +84,8 @@ nav ul li a:focus {
 
 section {
     background: var(--card-bg);
-    padding: 40px;
-    margin-bottom: 40px;
+    padding: 25px;
+    margin-bottom: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
     border: 1px solid var(--border-color);
@@ -88,7 +93,7 @@ section {
 }
 
 section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 #wstep {
@@ -108,7 +113,7 @@ section:hover {
 }
 
 h2 { 
-    font-size: 1.6em; 
+    font-size: 1.4em; 
     color: var(--text-main); 
     border-bottom: 2px solid var(--border-color); 
     padding-bottom: 10px; 
@@ -116,7 +121,7 @@ h2 {
 }
 
 h3 { 
-    font-size: 1.1em; 
+    font-size: 1.05em; 
     color: var(--text-muted); 
     text-transform: uppercase; 
     letter-spacing: 1px; 
@@ -125,7 +130,7 @@ h3 {
 }
 
 h4 { 
-    font-size: 1.2em; 
+    font-size: 1.1em; 
     color: var(--primary-color); 
     margin-top: 0; 
 }
@@ -143,16 +148,7 @@ h4 {
 .examples {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
-}
-
-@media (min-width: 768px) {
-    .translations {
-        grid-template-columns: 1fr 1fr;
-    }
-    .examples {
-        grid-template-columns: 1fr 1fr;
-    }
+    gap: 25px;
 }
 
 .example-item {
@@ -196,6 +192,40 @@ footer {
     text-align: center; 
     font-size: 0.9em; 
     color: var(--text-muted); 
-    padding: 40px 0; 
+    padding: 30px 0; 
     border-top: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    section {
+        padding: 35px;
+    }
+
+    .translations {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .examples {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    main, footer {
+        padding: 20px;
+    }
+
+    section {
+        padding: 40px;
+        margin-bottom: 40px;
+    }
 }
