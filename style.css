@@ -54,14 +54,21 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
+    align-items: center;
 }
 
 nav ul li {
-    margin: 6px;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 600;
@@ -71,6 +78,7 @@ nav ul li a {
     background-color: #f8fafc;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    line-height: 1;
 }
 
 nav ul li a:hover,
