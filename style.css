@@ -54,7 +54,7 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px 12px;
+    gap: 15px 10px;
 }
 
 nav ul li {
@@ -70,25 +70,15 @@ nav ul li a {
     justify-content: center;
     box-sizing: border-box;
     height: 100%;
-    width: 40px;
+    padding: 0 18px;
     color: var(--text-muted);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95em;
-    border-radius: 50%;
+    border-radius: 20px;
     background-color: #f8fafc;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
-}
-
-nav ul li:first-child {
-    width: auto;
-}
-
-nav ul li:first-child a {
-    width: auto;
-    padding: 0 16px;
-    border-radius: 20px;
 }
 
 nav ul li a:hover,
