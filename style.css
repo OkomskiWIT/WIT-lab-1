@@ -185,16 +185,17 @@ h4 {
 .example-item img:focus {
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    right: 0;
+    margin: auto;
+    width: 90vw;
+    height: 85vh;
     max-width: none;
     object-fit: contain;
     object-position: center;
     background-color: rgba(0, 0, 0, 0.85); 
-    z-index: 9999; 
-    margin: 0;
-    padding: 40px; 
+    z-index: 9999;
     box-sizing: border-box;
     cursor: zoom-out; 
     outline: none; 
