@@ -188,23 +188,14 @@ h4 {
     bottom: 0;
     left: 0;
     right: 0;
-<<<<<<< HEAD
     margin: auto;
-=======
->>>>>>> 0d2229c68682efb74f00b2285807ffe172d586a9
     width: 90vw;
     height: 85vh;
     max-width: none;
     object-fit: contain;
     object-position: center;
     background-color: rgba(0, 0, 0, 0.85); 
-<<<<<<< HEAD
     z-index: 9999;
-=======
-    z-index: 9999; 
-    margin: 0;
-    padding: 0px; 
->>>>>>> 0d2229c68682efb74f00b2285807ffe172d586a9
     box-sizing: border-box;
     cursor: zoom-out; 
     outline: none; 
