@@ -49,12 +49,18 @@ main {
 
 nav ul {
     list-style-type: none;
-    padding: 10px 0 20px 0;
+    padding: 5px 15px 15px 15px;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+nav ul::-webkit-scrollbar {
+    display: none;
 }
 
 nav ul li {
@@ -62,6 +68,7 @@ nav ul li {
     margin: 0;
     padding: 0;
     height: 40px;
+    flex-shrink: 0;
 }
 
 nav ul li a {
@@ -91,14 +98,14 @@ nav ul li a:focus {
 
 section {
     background: var(--card-bg);
-    padding: 25px 15px;
+    padding: 15px;
     margin-bottom: 10px;
     border-radius: 0;
     border-left: none;
     border-right: none;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #wstep {
@@ -151,6 +158,10 @@ h4 {
     margin-bottom: 25px;
 }
 
+.translations p {
+    margin-top: 0;
+}
+
 .examples {
     display: grid;
     grid-template-columns: 1fr;
@@ -167,13 +178,14 @@ h4 {
 }
 
 .example-item p {
-    margin-top: 15 px;
+    margin-top: 15px; 
+    line-height: 1.5;
 }
 
 .example-item img {
     max-width: 100%;
     width: 100%;
-    height: 450px;
+    height: 300px;
     object-fit: contain;
     object-position: center;
     background-color: transparent;
@@ -182,24 +194,35 @@ h4 {
     margin: 15px auto;
     cursor: zoom-in;
 }
-.example-item img:focus {
+
+.modal-overlay {
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
-    margin: auto;
-    width: 90vw;
-    height: 85vh;
-    max-width: none;
-    object-fit: contain;
-    object-position: center;
-    background-color: rgba(0, 0, 0, 0.85); 
-    z-index: 9999;
-    box-sizing: border-box;
-    cursor: zoom-out; 
-    outline: none; 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    opacity: 0;
     pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-overlay img {
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
+    display: block;
+    user-select: none;
 }
 
 .image-placeholder {
@@ -223,11 +246,20 @@ hr {
     display: none; 
 }
 
-footer { 
-    text-align: center; 
-    font-size: 0.9em; 
-    color: var(--text-muted); 
-    padding: 30px 15px; 
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--text-muted);
+    padding: 40px 15px;
+    border-top: 1px solid var(--border-color);
+    line-height: 1.6;
+}
+
+.footer-authors {
+    margin-top: 6px;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: 0.5px;
 }
 
 @media (min-width: 768px) {
@@ -243,9 +275,15 @@ footer {
         padding: 20px;
     }
 
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+
     section {
-        padding: 40px;
-        margin-bottom: 40px;
+        padding: 25px; 
+        margin-bottom: 20px; 
         border-radius: 16px;
         border: 1px solid var(--border-color);
     }
@@ -263,10 +301,6 @@ footer {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
         padding: 20px;
-    }
-
-    .translations p {
-        margin-top: 0;
     }
 
     .examples {

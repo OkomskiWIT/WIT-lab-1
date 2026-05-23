@@ -1,4 +1,0 @@
-Shortcuts — hidden from novice users — may speed up the interaction for the expert user such that the design can cater to both inexperienced and experienced users. Allow users to tailor frequent actions.
-
-
-Skróty – ukryte przed początkującymi – mogą przyspieszyć interakcję zaawansowanym użytkownikom, dzięki czemu system dostosowuje się zarówno do niedoświadczonych, jak i doświadczonych odbiorców. Pozwól użytkownikom dostosowywać częste akcje.
